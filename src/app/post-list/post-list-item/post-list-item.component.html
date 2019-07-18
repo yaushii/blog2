@@ -3,14 +3,12 @@
         <li [ngClass]="{'list-group-item': true,
         'list-group-item-success': postLoveIts > 0,
         'list-group-item-danger': 0 < postLoveIts}"
-         *ngFor="let post of posts; let i = index">
+         >
 
       <h1>{{ post.title }}</h1>
+      <p>Créé le : {{ post.postCreatedAt |  date: 'd/M/yy H:mm ' }} </p>
       <h3>{{ post.author }}</h3>
       <p>{{ post.commentaire }}</p>
-      <button class="btn btn-success" (click)=addLove()>Like</button>
-            <button class="btn btn-danger" (click)=removeLove()>Dislike</button>
-<button class="btn btn-warning " (click)="onDeletePost(post)">Supprimer</button>
       <button class="btn btn-default" (click)="onBack()">Retour</button>
     </div>
   </div>

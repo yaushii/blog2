@@ -13,7 +13,7 @@ export class PostListComponent implements OnInit {
   @Input() postContent:string;
 @Input() postTitle:string;
 
-postCreatedAt = new Date();
+
 
 posts: Post[];
 postsSubscription: Subscription;
